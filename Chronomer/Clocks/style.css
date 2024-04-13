@@ -1,0 +1,251 @@
+@font-face {
+  font-family: Passeggero;
+  src: url(../OTF/Passeggero.otf) format("opentype");
+}
+
+:root {
+  --main-text-color: #fff6f0;
+  --main-background-color: #3A3238;
+  --accent-color: #6A5336;
+}
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*   Lenis CSS   */
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/*   Navigation   */
+
+.scroll-watcher {
+  height: 5px;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+  mix-blend-mode: difference;
+  z-index: 5;
+}
+
+@keyframes scroll-watcher {
+  to { scale: 1 1; }
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+ul {
+  display: flex;
+  margin-left: auto;
+  padding: 10px;
+  /* mix-blend-mode: difference; */
+}
+
+.items a {
+  padding: 20px;
+  color: var(--main-text-color);
+  font-family: Montserrat, sans-serif;
+  text-decoration: none;
+  /* mix-blend-mode: difference; */
+}
+
+#current-page {
+  text-decoration: underline;
+  text-underline-offset: 7.5px;
+  color: var(--main-text-color);
+  mix-blend-mode: difference;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+/*   Header   */
+
+header {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--main-background-color);
+  /* background-image: url(IMG/POM.webp); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero h1 {
+  font-family: Passeggero;
+  font-size: 15vw;
+  font-weight: normal;
+  color: var(--main-text-color);
+}
+
+.hero h1 sup {
+  font-size: 5vw;
+}
+
+/*   Body   */
+
+main {
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  height: 100vh;
+  overflow: hidden;
+  bottom: 0;
+}
+
+.sticky {
+  margin-bottom: 30vh;
+  box-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.75);
+  scroll-snap-align: center;
+}
+
+.split .left {
+  width: 50vw;
+  height: calc(100vh - 100px);
+  margin-top: 100px;
+  padding: 2.5vw;
+}
+
+.split .left img {
+  width: 100%;
+  height: 100%;
+}
+
+.split .right {
+  width: 50vw;
+  height: calc(100vh - 100px);
+  margin-top: 100px;
+  padding: 2.5vw 5vw 2.5vw 1vw;
+}
+
+.split {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10vh;
+}
+
+.BB {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 20vh;
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  box-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.container.LO {
+  background-color: var(--main-text-color);
+  color: var(--main-background-color);
+  z-index: -1;
+}
+
+.container.AM87 {
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  z-index: -2;
+}
+
+.container.CAG {
+  background-color: var(--main-text-color);
+  color: var(--main-background-color);
+  z-index: -3;
+}
+
+.container.SCC {
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  z-index: -4;
+}
+
+.container.PAC {
+  background-color: var(--main-text-color);
+  color: var(--main-background-color);
+  z-index: -5;
+}
+
+.container.HMC {
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  z-index: -6;
+}
+
+.container.RS {
+  background-color: var(--main-text-color);
+  color: var(--main-background-color);
+  z-index: -7;
+}
+
+.container.TT {
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+  z-index: -8;
+}
+
+.container.JAC {
+  background-color: var(--main-text-color);
+  color: var(--main-background-color);
+  z-index: -9;
+}
+
+/*   Footer   */
+
+footer {
+  height: 1000px;
+}

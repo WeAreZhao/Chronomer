@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Chronomer</title>
+  <link rel="icon" type="image/x-icon" href="../IMG/III.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+  <script src="lenis.js"></script>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.66/build/spline-viewer.js"></script>
+</head>
+
+<body>
+    <header>
+      <div class="scroll-watcher"></div>
+      <nav>
+        <div class="logo"><a href="../Home/index.html">Chronomer | Clocks</a></div>
+        <ul>
+          <li class="items" id="current-page"><a href="./" aria-current="page">Home</a></li>
+          <li class="items"><a href="../History/index.html">History</a></li>
+          <li class="items"><a href="../Clocks/index.html">Clocks</a></li>
+        </ul>
+        <ul>
+          <li class="items"><a href="../About/index.html">About</a></li>
+          <li class="items"><a href="../Contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button onclick="shift(), reveal()">X</button>
+      <div class="screen"></div>
+      
+      <div class="hero">
+        <div class="title">
+          <div class="canvas-cont">
+            <spline-viewer url="https://prod.spline.design/A8ghsFBK0u1Z8KT7/scene.splinecode"></spline-viewer>
+          </div>
+          <h1>
+            <span>C</span>
+            <span>h</span>
+            <span>r</span>
+            <span>o</span>
+            <span>n</span>
+            <span>o</span>
+            <span>m</span>
+            <span>e</span>
+            <span>r</span>
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="left">
+          <img src="IMG/cover.webp" alt="A very magificient wooden clock on what appears to be a newspaper.">
+        </div>
+        <div class="right">
+          <p>
+            The average adult checks their phone 80 times a day. 
+          </p>
+          <p> 
+            And out of the 80, we are checking the time 48 of the times.
+          </p>
+          <p>
+            But do we really know how time works?
+          </p>
+        </div>
+      </section>
+      
+      <div class="body" id="target">
+        <section class="clock-face">
+          <div class="text">
+            <h2>Clock Dial</h2>
+            <p> There are many ways </p>
+          </div>
+          <img class="body-img" src="IMG/Dial.webp">
+          <img class="body-img" id="img2" src="IMG/dialPainting.webp">
+        </section>
+
+        <section class="gears">
+          <img class="body-img" src="IMG/Gear.webp">
+          <div class="text">
+            <h2>Gears</h2>
+            <p> 
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi aliquid blanditiis doloribus qui aspernatur cupiditate. Exercitationem beatae eaque ut pariatur, corporis nobis dolorum, maiores eveniet obcaecati possimus repellendus? Rerum, et consequatur! Ipsum harum voluptates officiis sed asperiores incidunt, sequi aspernatur nihil accusantium maxime natus veritatis aliquam voluptate ea praesentium doloremque. 
+            </p>
+          </div>
+        </section>
+
+        <section class="oscilator">
+          <div class="text">
+            <h2>Oscilator</h2>
+            <p> 
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. In nam laudantium iste eveniet vitae iure assumenda quas rem necessitatibus placeat animi sequi, qui tenetur illum, alias sed ab vel sint accusamus. Id earum assumenda rem nobis laborum sapiente sint neque, facilis, hic minus, nam tempore itaque cumque perferendis maiores quidem. 
+            </p>
+          </div>
+          <img class="body-img" src="../IMG/Oscilator.webp">
+        </section>
+
+        <section class="">
+          <div class="text">
+            <h2>Oscilator</h2>
+            <p> 
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. In nam laudantium iste eveniet vitae iure assumenda quas rem necessitatibus placeat animi sequi, qui tenetur illum, alias sed ab vel sint accusamus. Id earum assumenda rem nobis laborum sapiente sint neque, facilis, hic minus, nam tempore itaque cumque perferendis maiores quidem. 
+            </p>
+          </div>
+          <img class="body-img" src="../IMG/Oscilator.webp">
+        </section>
+      </div>
+
+    </main>
+
+    <footer>
+        <div class="temp">
+          <h2>
+            <div class="grid">
+              <span>C</span>
+              <span>H</span>
+              <span>R</span>
+              <span>O</span>
+              <span>N</span>
+              <span>O</span>
+              <span>M</span>
+              <span>E</span>
+              <span>R</span>
+            </div>
+          </h2>
+        </div>
+
+        <div class="question">
+          <div class="message">
+            <h2>Any Questions?</h2>
+          </div>
+          <form action="" method="post">
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </footer>
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>

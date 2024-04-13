@@ -1,0 +1,127 @@
+@font-face {
+  font-family: Passeggero;
+  src: url(../OTF/Passeggero.otf) format("opentype");
+}
+
+:root {
+  --main-text-color: #fff6f0;
+  --main-background-color: #3A3238;
+  --accent-color: #6A5336;
+}
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  background-color: var(--main-text-color);
+  -ms-overflow-style: none;
+  overflow: hidden;
+}
+
+/*   Lenis   */
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/*   Navigation   */
+
+.scroll-watcher {
+  height: 5px;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+  mix-blend-mode: difference;
+  z-index: 10000;
+}
+
+@keyframes scroll-watcher {
+  to { scale: 1 1; }
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: transparent;
+  z-index: 150;
+  mix-blend-mode: difference;
+}
+
+ul {
+  display: flex;
+  margin-left: auto;
+  padding: 10px;
+  /* mix-blend-mode: difference; */
+}
+
+.items a {
+  padding: 20px;
+  color: var(--main-text-color);
+  font-family: Montserrat, sans-serif;
+  text-decoration: none;
+  /* mix-blend-mode: difference; */
+}
+
+#current-page {
+  text-decoration: underline;
+  text-underline-offset: 7.5px;
+  color: var(--main-text-color);
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+/*   Header   */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--main-text-color);
+}
+
+h1 {
+  font-family: Passeggero, serif;
+  font-size: 10vw;
+  font-weight: normal;
+}
+
+/*   Body   */
+
+main {
+  width: 100vw;
+  height: fit-content;
+}
