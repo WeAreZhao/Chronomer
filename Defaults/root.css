@@ -1,0 +1,36 @@
+@font-face {
+  font-family: Passeggero;
+  src: url(../OTF/Passeggero.otf) format("opentype");
+}
+
+@font-face {
+  font-family: Ferrum;
+  src: url(../OTF/ferrum.otf) format("opentype");
+}
+
+:root {
+  --white: #ffffff;
+  --off-black: #151415;
+  --menu-transition-easing: 1, 0.03, 0.25, 1;
+  --grid-width: calc(100% - 40px);
+}
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+
+  -webkit-scrollbar-thumb:active {
+    background-color: #555;
+  }
+}

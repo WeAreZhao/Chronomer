@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clocks - Chronomer</title>
+  <link rel="icon" type="image/x-icon" href="../Defaults/III.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../Defaults/menu.css">
+  <link rel="stylesheet" href="../Defaults/lenis.css">
+  <link rel="stylesheet" href="../Defaults/root.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+  <script src="../Defaults/lenis.js"></script>
+  <script src="../Defaults/menu.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="scroll-watcher"></div>
+    <nav>
+      <div class="logo"><a href="../Home/index.html">Chronomer | Clocks</a></div>
+      <ul class="inner-container">
+        <li class="items"><a href="../Home/index.html">Home</a></li>
+        <li class="items"><a href="../History/index.html">History</a></li>
+        <li class="items" id="current-page"><a href="./" aria-current="page">Clocks</a></li>
+      </ul>
+      <ul>
+        <li class="items"><a href="../About/index.html">About</a></li>
+        <li class="items"><a href="../Contact/index.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menuButton" onclick="buttonClick()" aria-controls="primary-navigation" aria-expanded="false" data-state="closed">
+      <svg stroke="var(--off-black)" class="hamburger" viewBox="0 0 100 100" width="40">
+        <line class="line first" 
+          x1="2" y1="49" x2="99" y2="49" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-dasharray="4 43 30 15 4">
+        </line>
+        <line class="line second" 
+          x1="49" y1="2" x2="49" y2="99" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-dasharray="46 45 4">
+        </line>
+      </svg>
+  </button>
+    <div class="screen"></div>
+      
+    <div class="hero">
+      <h1>Famous <sup>(03)</sup></h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container BB">
+      <div class="split">
+        <div class="left">
+          <img src="IMG/BigBen.webp" alt="Image of Big Ben in front of the cloudy sky">
+        </div>
+        <div class="right">
+          <h2>Big Ben</h2>
+          <p>
+            Big Ben, an iconic symbol of London, encompasses the Great Bell housed within the Elizabeth Tower. Completed in 1859, this towering structure stands at 316 feet tall. Its renowned clock, featuring four impressive faces and the Westminster Quarters chime, symbolizes British punctuality and tradition, embodying resilience and history for generations of Londoners.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky container LO">
+      <div class="split">
+        <div class="left">
+          <img src="" alt="">
+        </div>
+        <div class="right">
+          <h2>Lateran Obelisk</h2>
+          <p>
+            The Lateran Obelisk, an ancient Egyptian monument standing at over 100 feet tall, graces the Piazza San Giovanni in Laterano in Rome. Transported to Rome in 357 AD, it symbolizes the city's rich history and architectural grandeur, embodying the cultural exchange between ancient civilizations and the enduring legacy of Rome.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky container AM87">
+      <div class="split">
+        <div class="left">
+          <img src="" alt="">
+        </div>
+        <div class="right">
+          <h2>Antikythera Mechanism87</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus repellendus fugiat aliquid, aliquam excepturi error in vitae! Dolorem recusandae at ipsam ab incidunt laborum officia nisi modi distinctio nostrum cupiditate velit aperiam architecto a deleniti qui nam, aspernatur, nesciunt voluptatibus praesentium obcaecati quos facere! Expedita laboriosam ipsum tempora dolor! Aliquid?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky container CAG">
+      <div class="split">
+        <div class="left">
+          <img src="" alt="">
+        </div>
+        <div class="right">
+          <h2>Clepsydra of Ancient Greece</h2>
+          <p>
+            In ancient Greece, the clepsydra, or water clock, was a timekeeping device utilized for various purposes, including regulating speeches in courts and measuring time in athletic competitions. Consisting of a container filled with water that dripped at a controlled rate, it provided a rudimentary yet effective means of tracking time, showcasing early Greek ingenuity in time measurement.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky container SCC">
+      <div class="split">
+        <div class="left">
+          <img src="" alt="">
+        </div>
+        <div class="right">
+          <h2>Salisbury Cathedral Clock</h2>
+          <p>
+            The Salisbury Cathedral Clock, an exceptional medieval timepiece dating back to the 14th century, is a marvel of engineering and craftsmanship housed within Salisbury Cathedral in England. This astronomical clock not only displays the time but also tracks the movements of the sun, moon, and stars, symbolizing the intersection of science, art, and spirituality in the Middle Ages.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky container PAC">
+      <div class="split">
+        <div class="left">
+          <img src="" alt="">
+        </div>
+        <div class="right">
+          <h2>Prague Astronomical Clock</h2>
+          <p>
+            The Prague Astronomical Clock, a masterpiece of medieval engineering and artistry, adorns the Old Town Hall in Prague, Czech Republic. Dating back to the 15th century, this intricate clock not only tells the time but also displays astronomical information, such as the position of the sun, moon phases, and zodiac signs, captivating visitors with its celestial beauty and historical significance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky container HMC">
+      <div class="split">
+        <div class="left">
+          <img src="" alt="">
+        </div>
+        <div class="right">
+          <h2>H1 Marine Chronometer</h2>
+          <p>
+            The H1 Marine Chronometer, a groundbreaking invention by John Harrison in the 18th century, revolutionized maritime navigation. This precision timekeeping device, essential for determining longitude at sea, maintained accuracy even in harsh conditions. Harrison's ingenuity and craftsmanship paved the way for safer and more accurate voyages, reshaping the course of maritime history.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky container RS">
+      <div class="split">
+        <div class="left">
+          <img src="" alt="">
+        </div>
+        <div class="right">
+          <h2>Hamilton Watch Company's Railway Special</h2>
+          <p>
+            The Hamilton Watch Company's Railway Special timepiece, introduced in the early 20th century, was renowned for its accuracy and reliability, making it a staple for railroad professionals. Built to withstand the rigors of rail travel, this watch adhered to strict standards set by railway companies, ensuring precise timekeeping crucial for safe and efficient train operations.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky container TT">
+      <div class="split">
+        <div class="left">
+          <img src="" alt="">
+        </div>
+        <div class="right">
+          <h2>Grandfather Clock, Thomas Tompion</h2>
+          <p>
+            The Grandfather Clock crafted by Thomas Tompion in the late 17th century stands as a testament to his unparalleled skill and innovation in horology. Known for its majestic stature and intricate mechanisms, Tompion's masterpiece became the epitome of precision timekeeping and luxurious design during the Golden Age of English clockmaking, leaving an enduring legacy in horological history.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container JAC">
+      <div class="split">
+        <div class="left">
+          <img src="" alt="">
+        </div>
+        <div class="right">
+          <h2>John Arnold's Chronometer No. 1</h2>
+          <p>
+            John Arnold's Chronometer No. 1, created in the late 18th century, marked a significant advancement in marine navigation. Renowned for its unparalleled accuracy and robust construction, this pioneering timepiece revolutionized maritime travel by providing sailors with a reliable means of determining longitude. Arnold's Chronometer No. 1 remains a symbol of innovation and excellence in horology.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="temp">
+      <h2>
+        <div class="grid">
+          <span>C</span>
+          <span>H</span>
+          <span>R</span>
+          <span>O</span>
+          <span>N</span>
+          <span>O</span>
+          <span>M</span>
+          <span>E</span>
+          <span>R</span>
+        </div>
+      </h2>
+    </div>
+
+    <div class="question">
+      <div class="message">
+        <h2>Any Questions?</h2>
+      </div>
+      <form action="" method="">
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </footer>
+</body>
+<script src="code.js"></script>
+
+</html>

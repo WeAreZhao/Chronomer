@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Chronomer</title>
+  <link rel="icon" type="image/x-icon" href="../Defaults/III.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../Defaults/menu.css">
+  <link rel="stylesheet" href="../Defaults/lenis.css">
+  <link rel="stylesheet" href="../Defaults/root.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+  <script src="../Defaults/lenis.js"></script>
+  <script src="../Defaults/menu.js"></script>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.66/build/spline-viewer.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="scroll-watcher"></div>
+    <nav>
+      <div class="logo"><a href="../Home/index.html">Chronomer | Clocks</a></div>
+      <ul>
+        <li class="items" id="current-page"><a href="./" aria-current="page">Home</a></li>
+        <li class="items"><a href="../History/index.html">History</a></li>
+        <li class="items"><a href="../Clocks/index.html">Clocks</a></li>
+      </ul>
+      <ul>
+        <li class="items"><a href="../About/index.html">About</a></li>
+        <li class="items"><a href="../Contact/index.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menuButton" onclick="buttonClick()" aria-controls="primary-navigation" aria-expanded="false" data-state="closed">
+      <svg stroke="var(--off-black)" class="hamburger" viewBox="0 0 100 100" width="40">
+        <line class="line first" 
+          x1="2" y1="49" x2="99" y2="49" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-dasharray="4 43 30 15 4">
+        </line>
+        <line class="line second" 
+          x1="49" y1="2" x2="49" y2="99" 
+          stroke-width="2" 
+          stroke-linecap="round" 
+          stroke-dasharray="46 45 4">
+        </line>
+      </svg>
+    </button>
+    <div class="screen"></div>
+    
+    <div class="hero">
+      <!-- <div class="canvas-cont">
+        <spline-viewer url="https://prod.spline.design/A8ghsFBK0u1Z8KT7/scene.splinecode"></spline-viewer>
+      </div>  -->
+      <div class="title">
+        <h1>
+          <span>C</span>
+          <span>h</span>
+          <span>r</span>
+          <span>o</span>
+          <span>n</span>
+          <span>o</span>
+          <span>m</span>
+          <span>e</span>
+          <span>r</span>
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="introduction">
+      <div class="intro">
+        <div class="image">
+          <div class="image-shadow"></div>
+          <img src="IMG/crowd.webp" alt="A very magificient crowd on the street." id="crowd-image">
+        </div>
+        <div class="above" id="target">
+          <p id="one">
+            Over <span>94%</span> of people on Earth own a mobile device.
+          </p>
+          <p id="two">
+            The average person checks their phone <span>80</span> times a day. 
+          </p>
+          <p id="three"> 
+            And we use it to check the time over <span>60%</span> of the times.
+          </p>
+          <p id="four">
+            But do we really know how time works?
+          </p>
+        </div>
+      </div>
+      <div class="parts-subheading">
+        <h2>Parts of A Clock</h2>
+      </div>
+    </section>
+    
+    <section class="parts">
+
+      <img id="dial" src="IMG/Dial.webp" alt="Cool dial">
+      <div id="dial-desc">
+        <h2>Clock Dials</h2>
+        <p>
+          Clock dials are typically made using a meticulous process involving skilled craftsmanship and modern technology. Initially, a base material like brass or steel is selected and shaped into the desired size and form. Intricate designs and numerals are then either engraved or printed onto the surface, often with precision machinery. Finally, the dial may undergo finishing touches such as painting, gilding, or coating to achieve the desired aesthetic and durability.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="temp">
+      <h1>
+        <span>C</span>
+        <span>H</span>
+        <span>R</span>
+        <span>O</span>
+        <span>N</span>
+        <span>O</span>
+        <span>M</span>
+        <span>E</span>
+        <span>R</span>
+      </h1>
+    </div>
+
+    <div class="question">
+      <div class="message">
+        <h2>Any Questions?</h2>
+      </div>
+      <form action="" method="">
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </footer>
+</body>
+<script src="main.js"></script>
+
+</html>
